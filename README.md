@@ -1,85 +1,80 @@
-Here's a README file based on the provided code for your FIFA 21 dataset cleaning project:
+README file for FIFA 21 Dataset Cleaning Project:
 
 ---
 
 # FIFA 21 Dataset Cleaning Project
 
-This project aims to clean and preprocess the FIFA 21 dataset for further analysis and exploration. The dataset contains various attributes of football players such as club, contract details, height, weight, and hits.
+This project focuses on cleaning and preparing the FIFA 21 dataset for analysis. The dataset includes various attributes related to football players such as club affiliation, contract details, physical attributes like height and weight, and search popularity.
 
 ## Table of Contents
 
-- [Importing Libraries](#importing-libraries)
-- [Read in the Dataset](#read-in-the-dataset)
-- [Data Cleaning](#data-cleaning)
-  - [Club](#club)
-  - [Contract](#contract)
-  - [Height](#height)
-  - [Weight](#weight)
-  - [Loan Date End](#loan-date-end)
-  - [W/F](#wf)
-  - [Hits](#hits)
+- [Introduction](#introduction)
+- [Setup](#setup)
+- [Data Cleaning Steps](#data-cleaning-steps)
+  - [1. Club](#1-club)
+  - [2. Contract](#2-contract)
+  - [3. Height](#3-height)
+  - [4. Weight](#4-weight)
+  - [5. Loan Date End](#5-loan-date-end)
+  - [6. W/F](#6-wf)
+  - [7. Hits](#7-hits)
 
-## Importing Libraries
+## Introduction
+
+The FIFA 21 dataset is loaded and processed using Python and pandas library. Various cleaning techniques are applied to ensure consistency and accuracy in the data before analysis.
+
+## Setup
 
 ```python
 import pandas as pd
 import numpy as np
 ```
 
-## Read in the Dataset
+## Data Cleaning Steps
+
+### 1. Club
 
 ```python
-pd.set_option('display.max_columns', None)
-data = pd.read_csv('fifa21 raw data v2.csv')
+# Remove leading/trailing whitespaces from club names
 ```
 
-## Data Cleaning
-
-### Club
-
-```python
-fifa['Club'] = fifa['Club'].str.strip()
-```
-
-### Contract
+### 2. Contract
 
 ```python
 # Extract contract start date, end date, and length
-# Categorize contract status
+# Categorize contract status (Free, On Loan, Contract)
 ```
 
-### Height
+### 3. Height
 
 ```python
-# Convert height to centimeters
+# Convert height from feet-inches to centimeters
 ```
 
-### Weight
+### 4. Weight
 
 ```python
-# Convert weight to kilograms
+# Convert weight from pounds to kilograms
 ```
 
-### Loan Date End
+### 5. Loan Date End
 
 ```python
-# Extract loan date end for players on loan
+# Extract loan end date for players on loan
 ```
 
-### W/F
+### 6. W/F
 
 ```python
 # Remove special characters from W/F attribute
 ```
 
-### Hits
+### 7. Hits
 
 ```python
-# No cleaning needed
+# No cleaning required for Hits attribute
 ```
 
 ---
 
-This README provides an overview of the steps taken to clean the FIFA 21 dataset. Each section describes the cleaning process for specific attributes along with the corresponding code snippets.
-
-Feel free to add more sections or details to this README to provide additional context or instructions for users.
+This README provides an overview of the FIFA 21 dataset cleaning process, outlining the steps taken to ensure the data is uniform and ready for analysis. Each section includes a brief description of the cleaning step along with the corresponding code snippet.
